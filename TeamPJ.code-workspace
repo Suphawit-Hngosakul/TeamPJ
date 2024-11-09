@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ProjectG6",
+		"java.compile.nullAnalysis.mode": "disabled"
+	}
+}
