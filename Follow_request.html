@@ -6,6 +6,7 @@
     <title>ระบบยื่นคำร้อง</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/work.css">
+    <link rel="stylesheet" href="css/notify.css">
 </head>
 <body>
     <nav class="navbar">
@@ -28,6 +29,11 @@
         <a href="index.html">ยื่นคำร้อง</a>
         <a href="Follow_request.html">ติดตามผลคำร้อง</a>
         <a href="็History_request.html">ประวัติคำร้อง</a>
+        <!-- ปุ่มการแจ้งเตือน -->
+        <button class="notification-btn" onclick="toggleNotification()">
+            <img src="https://img.icons8.com/ios-filled/50/000000/appointment-reminders.png" alt="alert-icon"/>
+            การแจ้งเตือน
+        </button>
     </div>
 
     <main class="follow_request">
@@ -49,7 +55,16 @@
             </a>
         </div>
     </main>
+
+    <!-- ป๊อปอัพแจ้งเตือน -->
+    <div id="notification-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="toggleNotification()">&times;</span>
+            <h3>ส่งคำร้องสำเร็จ</h3>
+        </div>
+    </div>
     
+    <script src="js/notify.js"></script>
     <script src="js/script.js"></script>
 </body>
 
