@@ -67,13 +67,13 @@
             <label for="faculty" class="faculty-label">คณะ</label>
             <input type="text" id="faculty" name="faculty" class="faculty-input" placeholder="กรอกชื่อคณะ">
             <label for="year" class="self-year-label">ชั้นปีที่</label>
-            <input type="number" min="1" max="4" class="self-year-input">
+            <input type="number" min="1" max="4" class="self-year-input" placeholder = "1">
         </div>
 
         <!-- ช่องทางการติดต่อ -->
         <div class="form-row9">
             <label for="contact-address" class="contact-address-label">ที่อยู่ที่ติดต่อ</label>
-            <input type="text" class="contact-input">
+            <input type="text" class="contact-input" placeholder = "กรอกที่อยู่">
         </div>
 
         <div class="form-row10">
@@ -140,7 +140,21 @@
     </form>
 </main>
 
-    <script src="js/script.js"></script>
+    <script src="../js/requestW.js"></script>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        if (user) {
+            document.getElementById('user-name').innerText = user.username;
+            document.getElementById('user-ID').innerText = user.studentID;
+            document.getElementById('user-email').innerText = user.email;
+        } else {
+            window.location.href = '../login.html';
+        }
+    });
+</script>
 
 </html>
